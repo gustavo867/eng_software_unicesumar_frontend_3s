@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" >
+
+        <label for="age">Idade:</label>
+        <input type="number" id="age">
+
+        <button id="addUser"  onclick="addUser" >Enviar</button>
+
+    </form>
+
+    <div>
+        <h3>Lista de Usuários</h3>
+        <ul id="listNames">
+        </ul>
+    </div>
+    <script>
+        
+        const userList = []
+
+        const botao = document.getElementById("addUser");
+
+        // function renderizarUsuarios(){
+        //     userList.forEach(())
+        // }
+
+        function addUser(){
+            console.log(name, age);
+            const name = document.getElementById("name");
+            const age = document.getElementById("age");
+
+            const listNames = document.getElementById("listNames");
+
+            const li = document.createElement("li");
+            li.textContent = `${name} - ${age}`;
+            listNames.appendChild(li);
+        }
+
+
+    </script>
+</body>
+</html>
