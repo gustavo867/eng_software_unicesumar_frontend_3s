@@ -1,51 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD de Usuários</title>
 </head>
+
 <body>
-    <form>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" >
+    <h2>Cadastro de Usuários</h2>
 
-        <label for="age">Idade:</label>
-        <input type="number" id="age">
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="number" id="idade" placeholder="Idade">
+    <button onclick="adicionarUsuario()">Adicionar</button>
 
-        <button id="addUser"  onclick="addUser" >Enviar</button>
+    <ul id="listaUsuarios"></ul>
 
-    </form>
-
-    <div>
-        <h3>Lista de Usuários</h3>
-        <ul id="listNames">
-        </ul>
-    </div>
     <script>
-        
-        const userList = []
+        const usuarios = [];
 
-        const botao = document.getElementById("addUser");
+        function renderizarUsuarios() {
+            console.log(usuarios);
+            const lista = document.getElementById("listaUsuarios");
+            lista.innerHTML = "";
 
-        // function renderizarUsuarios(){
-        //     userList.forEach(())
-        // }
-
-        function addUser(){
-            console.log(name, age);
-            const name = document.getElementById("name");
-            const age = document.getElementById("age");
-
-            const listNames = document.getElementById("listNames");
-
-            const li = document.createElement("li");
-            li.textContent = `${name} - ${age}`;
-            listNames.appendChild(li);
+            usuarios.forEach((usuario, index) => {
+                const li = document.createElement("li");
+                li.innerHTML = `
+          ${usuario.nome} (${usuario.idade} anos)
+          <button onclick="removerUsuario(${index})">Remover</button>
+        `;
+                lista.appendChild(li);
+            });
         }
 
+        function adicionarUsuario() {
+            const nome = document.getElementById("nome").value;
+            const idade = document.getElementById("idade").value;
 
+            if (nome && idade) {
+                usuarios.push({ nome, idade: Number(idade) });
+                renderizarUsuarios();
+                document.getElementById("nome").value = "";
+                document.getElementById("idade").value = "";
+            }
+        }
+
+        function removerUsuario(index) {
+            usuarios.splice(index, 1);
+            renderizarUsuarios();
+        }
     </script>
 </body>
+
 </html>
