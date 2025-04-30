@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Sites</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Sites Interessantes</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="sites.html">Home</a></li>
+                <li><a href="ferrametas.html">Ferramentas</a></li>
+                <li><a href="entreterimento.html">Entreterimento</a></li>
+                <li><a href="estudos.html">Estudos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h2>Ferramentas e Pesquisa</h2>
+                <div class="site">
+                    <img src="imagens/Google_logo.png" alt="Google">
+                    <div>
+                        <h3>Google</h3>
+                        <p>O maior motor de busca do mundo.</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="imagens/ChatGPT-Logo.png" alt="Google">
+                    <div>
+                        <h3>ChatGPT</h3>
+                        <p>Uma inteligência artificial desenvolvida para responder perguntas e auxiliar em diversas tarefas.</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="imagens/GitHub_Logo.png" alt="GitHub">
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>Hospedagem de código e colaboração para desenvolvedores.</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="imagens/stackoverflow_logo.png" alt="Stack Overflow">
+                    <div>
+                        <h3>Stack Overflow</h3>
+                        <p>Comunidade de perguntas e respostas para programadores.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Entretenimento</h2>
+                <div class="site">
+                    <img src="imagens/youtube_logo.jpg" alt="YouTube">
+                    <div>
+                        <h3>YouTube</h3>
+                        <p>Plataforma de vídeos para todos os gostos.</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="imagens/Netflix-Symbol.png" alt="Netflx">
+                    <div>
+                        <h3>Netflx</h3>
+                        <p>Plataforma para assistir filmes.</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="imagens/twitch.png" alt="Netflx">
+                    <div>
+                        <h3>Twitch</h3>
+                        <p>Plataforma de streaming, para assistir diversos tipos de conteúdos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Estudo</h2>
+                <div class="site">
+                    <img src="imagens/alura.png" alt="GitHub">
+                    <div>
+                        <h3>Alura</h3>
+                        <p>A Alura é uma plataforma de cursos online focada em tecnologia, programação, design e negócios.</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="imagens/Udemy_logo.png" alt="Stack Overflow">
+                    <div>
+                        <h3>Udemy</h3>
+                        <p>A Udemy é uma plataforma de aprendizado online que oferece cursos em diversas áreas, como tecnologia, negócios, design e muito mais.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="comments-section">
+                    <h2>Comentários</h2>
+                    <form id="comment-form">
+                        <div>
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="comment">Comentário:</label>
+                            <textarea id="comment" name="comment" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <h3>Comentários Recentes</h3>
+                    <div id="comments-list" class="comments-list">
+                    </div>
+                </div>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lista de Sites</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
