@@ -1,0 +1,8 @@
+services:
+  ts-compiler:
+    build: .
+    volumes:
+      - .:/app
+
+
+    
