@@ -8,6 +8,7 @@ function Header(){
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/pokemons">Pokémons</Link>
+                <Link to="/locations">Locais</Link>
             </nav>
         </header>
         
